@@ -284,14 +284,14 @@ public class ldap_to_excel implements TalendJob {
 		}
 	}
 
-	public void tLDAPAttributesInput_1_error(Exception exception, String errorComponent,
+	public void tLDAPInput_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
 		status = "failure";
 
-		tLDAPAttributesInput_1_onSubJobError(exception, errorComponent, globalMap);
+		tLDAPInput_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tLogRow_1_error(Exception exception, String errorComponent,
@@ -301,14 +301,420 @@ public class ldap_to_excel implements TalendJob {
 
 		status = "failure";
 
-		tLDAPAttributesInput_1_onSubJobError(exception, errorComponent, globalMap);
+		tLDAPInput_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tLDAPAttributesInput_1_onSubJobError(Exception exception, String errorComponent,
+	public void tFileOutputDelimited_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tLDAPInput_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tLDAPInput_1_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
 				exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
+		final static byte[] commonByteArrayLock_LDAP_TOS_ldap_to_excel = new byte[0];
+		static byte[] commonByteArray_LDAP_TOS_ldap_to_excel = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String whenCreated;
+
+		public String getWhenCreated() {
+			return this.whenCreated;
+		}
+
+		public String whenChanged;
+
+		public String getWhenChanged() {
+			return this.whenChanged;
+		}
+
+		public String userPrincipalName;
+
+		public String getUserPrincipalName() {
+			return this.userPrincipalName;
+		}
+
+		public String name;
+
+		public String getName() {
+			return this.name;
+		}
+
+		public String mail;
+
+		public String getMail() {
+			return this.mail;
+		}
+
+		public String employeeID;
+
+		public String getEmployeeID() {
+			return this.employeeID;
+		}
+
+		public String displayName;
+
+		public String getDisplayName() {
+			return this.displayName;
+		}
+
+		public String sAMAccountName;
+
+		public String getSAMAccountName() {
+			return this.sAMAccountName;
+		}
+
+		public String distinguishedName;
+
+		public String getDistinguishedName() {
+			return this.distinguishedName;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime * result + ((this.employeeID == null) ? 0 : this.employeeID.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row2Struct other = (row2Struct) obj;
+
+			if (this.employeeID == null) {
+				if (other.employeeID != null)
+					return false;
+
+			} else if (!this.employeeID.equals(other.employeeID))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row2Struct other) {
+
+			other.whenCreated = this.whenCreated;
+			other.whenChanged = this.whenChanged;
+			other.userPrincipalName = this.userPrincipalName;
+			other.name = this.name;
+			other.mail = this.mail;
+			other.employeeID = this.employeeID;
+			other.displayName = this.displayName;
+			other.sAMAccountName = this.sAMAccountName;
+			other.distinguishedName = this.distinguishedName;
+
+		}
+
+		public void copyKeysDataTo(row2Struct other) {
+
+			other.employeeID = this.employeeID;
+
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_LDAP_TOS_ldap_to_excel.length) {
+					if (length < 1024 && commonByteArray_LDAP_TOS_ldap_to_excel.length == 0) {
+						commonByteArray_LDAP_TOS_ldap_to_excel = new byte[1024];
+					} else {
+						commonByteArray_LDAP_TOS_ldap_to_excel = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_LDAP_TOS_ldap_to_excel, 0, length);
+				strReturn = new String(commonByteArray_LDAP_TOS_ldap_to_excel, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private String readString(org.jboss.marshalling.Unmarshaller unmarshaller) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = unmarshaller.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_LDAP_TOS_ldap_to_excel.length) {
+					if (length < 1024 && commonByteArray_LDAP_TOS_ldap_to_excel.length == 0) {
+						commonByteArray_LDAP_TOS_ldap_to_excel = new byte[1024];
+					} else {
+						commonByteArray_LDAP_TOS_ldap_to_excel = new byte[2 * length];
+					}
+				}
+				unmarshaller.readFully(commonByteArray_LDAP_TOS_ldap_to_excel, 0, length);
+				strReturn = new String(commonByteArray_LDAP_TOS_ldap_to_excel, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private void writeString(String str, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (str == null) {
+				marshaller.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				marshaller.writeInt(byteArray.length);
+				marshaller.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_LDAP_TOS_ldap_to_excel) {
+
+				try {
+
+					int length = 0;
+
+					this.whenCreated = readString(dis);
+
+					this.whenChanged = readString(dis);
+
+					this.userPrincipalName = readString(dis);
+
+					this.name = readString(dis);
+
+					this.mail = readString(dis);
+
+					this.employeeID = readString(dis);
+
+					this.displayName = readString(dis);
+
+					this.sAMAccountName = readString(dis);
+
+					this.distinguishedName = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void readData(org.jboss.marshalling.Unmarshaller dis) {
+
+			synchronized (commonByteArrayLock_LDAP_TOS_ldap_to_excel) {
+
+				try {
+
+					int length = 0;
+
+					this.whenCreated = readString(dis);
+
+					this.whenChanged = readString(dis);
+
+					this.userPrincipalName = readString(dis);
+
+					this.name = readString(dis);
+
+					this.mail = readString(dis);
+
+					this.employeeID = readString(dis);
+
+					this.displayName = readString(dis);
+
+					this.sAMAccountName = readString(dis);
+
+					this.distinguishedName = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.whenCreated, dos);
+
+				// String
+
+				writeString(this.whenChanged, dos);
+
+				// String
+
+				writeString(this.userPrincipalName, dos);
+
+				// String
+
+				writeString(this.name, dos);
+
+				// String
+
+				writeString(this.mail, dos);
+
+				// String
+
+				writeString(this.employeeID, dos);
+
+				// String
+
+				writeString(this.displayName, dos);
+
+				// String
+
+				writeString(this.sAMAccountName, dos);
+
+				// String
+
+				writeString(this.distinguishedName, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public void writeData(org.jboss.marshalling.Marshaller dos) {
+			try {
+
+				// String
+
+				writeString(this.whenCreated, dos);
+
+				// String
+
+				writeString(this.whenChanged, dos);
+
+				// String
+
+				writeString(this.userPrincipalName, dos);
+
+				// String
+
+				writeString(this.name, dos);
+
+				// String
+
+				writeString(this.mail, dos);
+
+				// String
+
+				writeString(this.employeeID, dos);
+
+				// String
+
+				writeString(this.displayName, dos);
+
+				// String
+
+				writeString(this.sAMAccountName, dos);
+
+				// String
+
+				writeString(this.distinguishedName, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("whenCreated=" + whenCreated);
+			sb.append(",whenChanged=" + whenChanged);
+			sb.append(",userPrincipalName=" + userPrincipalName);
+			sb.append(",name=" + name);
+			sb.append(",mail=" + mail);
+			sb.append(",employeeID=" + employeeID);
+			sb.append(",displayName=" + displayName);
+			sb.append(",sAMAccountName=" + sAMAccountName);
+			sb.append(",distinguishedName=" + distinguishedName);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row2Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.employeeID, other.employeeID);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
 
 	}
 
@@ -708,8 +1114,8 @@ public class ldap_to_excel implements TalendJob {
 
 	}
 
-	public void tLDAPAttributesInput_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tLDAPAttributesInput_1_SUBPROCESS_STATE", 0);
+	public void tLDAPInput_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tLDAPInput_1_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -729,6 +1135,205 @@ public class ldap_to_excel implements TalendJob {
 				globalResumeTicket = true;
 
 				row1Struct row1 = new row1Struct();
+				row1Struct row2 = row1;
+
+				/**
+				 * [tFileOutputDelimited_1 begin ] start
+				 */
+
+				ok_Hash.put("tFileOutputDelimited_1", false);
+				start_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
+
+				currentComponent = "tFileOutputDelimited_1";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row2");
+				}
+
+				int tos_count_tFileOutputDelimited_1 = 0;
+
+				String fileName_tFileOutputDelimited_1 = "";
+				fileName_tFileOutputDelimited_1 = (new java.io.File(
+						"C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LDAP_TOS/ldap.csv")).getAbsolutePath()
+								.replace("\\", "/");
+				String fullName_tFileOutputDelimited_1 = null;
+				String extension_tFileOutputDelimited_1 = null;
+				String directory_tFileOutputDelimited_1 = null;
+				if ((fileName_tFileOutputDelimited_1.indexOf("/") != -1)) {
+					if (fileName_tFileOutputDelimited_1.lastIndexOf(".") < fileName_tFileOutputDelimited_1
+							.lastIndexOf("/")) {
+						fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
+						extension_tFileOutputDelimited_1 = "";
+					} else {
+						fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0,
+								fileName_tFileOutputDelimited_1.lastIndexOf("."));
+						extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1
+								.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
+					}
+					directory_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0,
+							fileName_tFileOutputDelimited_1.lastIndexOf("/"));
+				} else {
+					if (fileName_tFileOutputDelimited_1.lastIndexOf(".") != -1) {
+						fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0,
+								fileName_tFileOutputDelimited_1.lastIndexOf("."));
+						extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1
+								.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
+					} else {
+						fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
+						extension_tFileOutputDelimited_1 = "";
+					}
+					directory_tFileOutputDelimited_1 = "";
+				}
+				boolean isFileGenerated_tFileOutputDelimited_1 = true;
+				java.io.File filetFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
+				globalMap.put("tFileOutputDelimited_1_FILE_NAME", fileName_tFileOutputDelimited_1);
+				String[] headColutFileOutputDelimited_1 = new String[9];
+				class CSVBasicSet_tFileOutputDelimited_1 {
+					private char field_Delim;
+					private char row_Delim;
+					private char escape;
+					private char textEnclosure;
+					private boolean useCRLFRecordDelimiter;
+
+					public boolean isUseCRLFRecordDelimiter() {
+						return useCRLFRecordDelimiter;
+					}
+
+					public void setFieldSeparator(String fieldSep) throws IllegalArgumentException {
+						char field_Delim_tFileOutputDelimited_1[] = null;
+
+						// support passing value (property: Field Separator) by 'context.fs' or
+						// 'globalMap.get("fs")'.
+						if (fieldSep.length() > 0) {
+							field_Delim_tFileOutputDelimited_1 = fieldSep.toCharArray();
+						} else {
+							throw new IllegalArgumentException("Field Separator must be assigned a char.");
+						}
+						this.field_Delim = field_Delim_tFileOutputDelimited_1[0];
+					}
+
+					public char getFieldDelim() {
+						if (this.field_Delim == 0) {
+							setFieldSeparator(";");
+						}
+						return this.field_Delim;
+					}
+
+					public void setRowSeparator(String rowSep) {
+						if ("\r\n".equals(rowSep)) {
+							useCRLFRecordDelimiter = true;
+							return;
+						}
+						char row_DelimtFileOutputDelimited_1[] = null;
+
+						// support passing value (property: Row Separator) by 'context.rs' or
+						// 'globalMap.get("rs")'.
+						if (rowSep.length() > 0) {
+							row_DelimtFileOutputDelimited_1 = rowSep.toCharArray();
+						} else {
+							throw new IllegalArgumentException("Row Separator must be assigned a char.");
+						}
+						this.row_Delim = row_DelimtFileOutputDelimited_1[0];
+					}
+
+					public char getRowDelim() {
+						if (this.row_Delim == 0) {
+							setRowSeparator("\n");
+						}
+						return this.row_Delim;
+					}
+
+					public void setEscapeAndTextEnclosure(String strEscape, String strTextEnclosure)
+							throws IllegalArgumentException {
+						if (strEscape.length() <= 0) {
+							throw new IllegalArgumentException("Escape Char must be assigned a char.");
+						}
+
+						if ("".equals(strTextEnclosure))
+							strTextEnclosure = "\0";
+						char textEnclosure_tFileOutputDelimited_1[] = null;
+
+						if (strTextEnclosure.length() > 0) {
+							textEnclosure_tFileOutputDelimited_1 = strTextEnclosure.toCharArray();
+						} else {
+							throw new IllegalArgumentException("Text Enclosure must be assigned a char.");
+						}
+
+						this.textEnclosure = textEnclosure_tFileOutputDelimited_1[0];
+
+						if (("\\").equals(strEscape)) {
+							this.escape = '\\';
+						} else if (strEscape.equals(strTextEnclosure)) {
+							this.escape = this.textEnclosure;
+						} else {
+							// the default escape mode is double escape
+							this.escape = this.textEnclosure;
+						}
+
+					}
+
+					public char getEscapeChar() {
+						return (char) this.escape;
+					}
+
+					public char getTextEnclosure() {
+						return this.textEnclosure;
+					}
+				}
+
+				int nb_line_tFileOutputDelimited_1 = 0;
+				int splitedFileNo_tFileOutputDelimited_1 = 0;
+				int currentRow_tFileOutputDelimited_1 = 0;
+
+				CSVBasicSet_tFileOutputDelimited_1 csvSettings_tFileOutputDelimited_1 = new CSVBasicSet_tFileOutputDelimited_1();
+				csvSettings_tFileOutputDelimited_1.setFieldSeparator(";");
+				csvSettings_tFileOutputDelimited_1.setRowSeparator("\n");
+				csvSettings_tFileOutputDelimited_1.setEscapeAndTextEnclosure("\"", "\"");
+				// create directory only if not exists
+				if (directory_tFileOutputDelimited_1 != null && directory_tFileOutputDelimited_1.trim().length() != 0) {
+					java.io.File dir_tFileOutputDelimited_1 = new java.io.File(directory_tFileOutputDelimited_1);
+					if (!dir_tFileOutputDelimited_1.exists()) {
+						dir_tFileOutputDelimited_1.mkdirs();
+					}
+				}
+				com.talend.csv.CSVWriter CsvWritertFileOutputDelimited_1 = null;
+
+				java.io.File fileToDelete_tFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
+				if (fileToDelete_tFileOutputDelimited_1.exists()) {
+					fileToDelete_tFileOutputDelimited_1.delete();
+				}
+				CsvWritertFileOutputDelimited_1 = new com.talend.csv.CSVWriter(
+						new java.io.BufferedWriter(new java.io.OutputStreamWriter(
+								new java.io.FileOutputStream(fileName_tFileOutputDelimited_1, false), "UTF-8")));
+				CsvWritertFileOutputDelimited_1.setSeparator(csvSettings_tFileOutputDelimited_1.getFieldDelim());
+				if (!csvSettings_tFileOutputDelimited_1.isUseCRLFRecordDelimiter()
+						&& csvSettings_tFileOutputDelimited_1.getRowDelim() != '\r'
+						&& csvSettings_tFileOutputDelimited_1.getRowDelim() != '\n') {
+					CsvWritertFileOutputDelimited_1.setLineEnd("" + csvSettings_tFileOutputDelimited_1.getRowDelim());
+				}
+				if (filetFileOutputDelimited_1.length() == 0) {
+					headColutFileOutputDelimited_1[0] = "whenCreated";
+					headColutFileOutputDelimited_1[1] = "whenChanged";
+					headColutFileOutputDelimited_1[2] = "userPrincipalName";
+					headColutFileOutputDelimited_1[3] = "name";
+					headColutFileOutputDelimited_1[4] = "mail";
+					headColutFileOutputDelimited_1[5] = "employeeID";
+					headColutFileOutputDelimited_1[6] = "displayName";
+					headColutFileOutputDelimited_1[7] = "sAMAccountName";
+					headColutFileOutputDelimited_1[8] = "distinguishedName";
+					CsvWritertFileOutputDelimited_1.writeNext(headColutFileOutputDelimited_1);
+					CsvWritertFileOutputDelimited_1.flush();
+				}
+				CsvWritertFileOutputDelimited_1.setEscapeChar(csvSettings_tFileOutputDelimited_1.getEscapeChar());
+				CsvWritertFileOutputDelimited_1.setQuoteChar(csvSettings_tFileOutputDelimited_1.getTextEnclosure());
+				CsvWritertFileOutputDelimited_1.setQuoteStatus(com.talend.csv.CSVWriter.QuoteStatus.FORCE);
+
+				resourceMap.put("CsvWriter_tFileOutputDelimited_1", CsvWritertFileOutputDelimited_1);
+				resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
+
+				/**
+				 * [tFileOutputDelimited_1 begin ] stop
+				 */
 
 				/**
 				 * [tLogRow_1 begin ] start
@@ -924,411 +1529,451 @@ public class ldap_to_excel implements TalendJob {
 				 */
 
 				/**
-				 * [tLDAPAttributesInput_1 begin ] start
+				 * [tLDAPInput_1 begin ] start
 				 */
 
-				ok_Hash.put("tLDAPAttributesInput_1", false);
-				start_Hash.put("tLDAPAttributesInput_1", System.currentTimeMillis());
+				ok_Hash.put("tLDAPInput_1", false);
+				start_Hash.put("tLDAPInput_1", System.currentTimeMillis());
 
-				currentComponent = "tLDAPAttributesInput_1";
+				currentComponent = "tLDAPInput_1";
 
-				int tos_count_tLDAPAttributesInput_1 = 0;
+				int tos_count_tLDAPInput_1 = 0;
 
-				String baseDN_tLDAPAttributesInput_1 = "";
-				java.util.Hashtable env_tLDAPAttributesInput_1 = new java.util.Hashtable();
-				env_tLDAPAttributesInput_1.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY,
-						"com.sun.jndi.ldap.LdapCtxFactory");
-				env_tLDAPAttributesInput_1.put(javax.naming.Context.REFERRAL, "ignore");
-				env_tLDAPAttributesInput_1.put("java.naming.ldap.derefAliases", "always");
-				env_tLDAPAttributesInput_1.put(javax.naming.Context.PROVIDER_URL,
-						"ldap://" + "fortel.local" + ":" + 389);
+				String baseDN_tLDAPInput_1 = "";
+				int tLDAPInput_1_NB_LINE = 0;
+				java.util.Hashtable env_tLDAPInput_1 = new java.util.Hashtable();
+				env_tLDAPInput_1.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
+				env_tLDAPInput_1.put(javax.naming.Context.REFERRAL, "ignore");
+				env_tLDAPInput_1.put("java.naming.ldap.derefAliases", "always");
+				env_tLDAPInput_1.put(javax.naming.Context.PROVIDER_URL, "ldap://" + "fortel.local" + ":" + 389);
 
-				final String decryptedPassword_tLDAPAttributesInput_1 = routines.system.PasswordEncryptUtil
-						.decryptPassword(
-								"enc:routine.encryption.key.v1:L/DJwET6dysXEpAEO5EMP4YpKvT6wblVh+RPogRPUFCJRoiehQPRfAo=");
+				javax.naming.ldap.InitialLdapContext ctx_tLDAPInput_1 = null;
+				try {
 
-				env_tLDAPAttributesInput_1.put(javax.naming.Context.SECURITY_AUTHENTICATION, "simple");// "none","simple","strong"
-				env_tLDAPAttributesInput_1.put(javax.naming.Context.SECURITY_PRINCIPAL,
-						"alejandro.montalvan@fortel.local");
-				env_tLDAPAttributesInput_1.put(javax.naming.Context.SECURITY_CREDENTIALS,
-						decryptedPassword_tLDAPAttributesInput_1);
-				javax.naming.ldap.InitialLdapContext ctx_tLDAPAttributesInput_1 = new javax.naming.ldap.InitialLdapContext(
-						env_tLDAPAttributesInput_1, null);
+					final String decryptedPassword_tLDAPInput_1 = routines.system.PasswordEncryptUtil.decryptPassword(
+							"enc:routine.encryption.key.v1:GBqkg6BLLREn8zGlHEaD04+yB+DgoXqJCrAV8qN7a04Fm6S5UIyG+8o=");
 
-				int tLDAPAttributesInput_1_NB_LINE = 0;
-				javax.naming.directory.SearchControls searchCtls_tLDAPAttributesInput_1 = new javax.naming.directory.SearchControls();
-				searchCtls_tLDAPAttributesInput_1.setSearchScope(javax.naming.directory.SearchControls.SUBTREE_SCOPE);
-				searchCtls_tLDAPAttributesInput_1.setTimeLimit(0 * 1000);
-				searchCtls_tLDAPAttributesInput_1.setCountLimit(1000);
-				String searchBase_tLDAPAttributesInput_1 = "DC=FORTEL,DC=LOCAL";
-				baseDN_tLDAPAttributesInput_1 = searchBase_tLDAPAttributesInput_1;
-				javax.naming.directory.DirContext rootSchema_tLDAPAttributesInput_1 = null;
+					env_tLDAPInput_1.put(javax.naming.Context.SECURITY_AUTHENTICATION, "simple");// "none","simple","strong"
+					env_tLDAPInput_1.put(javax.naming.Context.SECURITY_PRINCIPAL, "alejandro.montalvan@fortel.local");
+					env_tLDAPInput_1.put(javax.naming.Context.SECURITY_CREDENTIALS, decryptedPassword_tLDAPInput_1);
+					ctx_tLDAPInput_1 = new javax.naming.ldap.InitialLdapContext(env_tLDAPInput_1, null);
 
-				javax.naming.NamingEnumeration answer_tLDAPAttributesInput_1 = ctx_tLDAPAttributesInput_1.search(
-						searchBase_tLDAPAttributesInput_1, "(&(objectClass=*)(employeeId=*))",
-						searchCtls_tLDAPAttributesInput_1);
+					javax.naming.directory.SearchControls searchCtls_tLDAPInput_1 = new javax.naming.directory.SearchControls();
+					searchCtls_tLDAPInput_1.setSearchScope(javax.naming.directory.SearchControls.SUBTREE_SCOPE);
+					searchCtls_tLDAPInput_1.setReturningAttributes(
+							new String[] { "whenCreated", "whenChanged", "userPrincipalName", "name", "mail",
+									"employeeID", "displayName", "sAMAccountName", "distinguishedName", });
+					searchCtls_tLDAPInput_1.setTimeLimit(10000 * 1000);
+					searchCtls_tLDAPInput_1.setCountLimit(10000);
+					baseDN_tLDAPInput_1 = "DC=FORTEL,DC=LOCAL";
 
-				rootSchema_tLDAPAttributesInput_1 = ctx_tLDAPAttributesInput_1.getSchema("");
-				java.util.Set<String> objectClasses_tLDAPAttributesInput_1 = new java.util.HashSet<String>();
-				java.util.Set<String> objectAttributes_tLDAPAttributesInput_1 = new java.util.HashSet<String>();
-				java.util.Set<String> mandatoryAttributes_tLDAPAttributesInput_1 = new java.util.HashSet<String>();
-				java.util.Set<String> optionalAttributes_tLDAPAttributesInput_1 = new java.util.HashSet<String>();
+					// Set the page size and initialize the cookie that we pass back in subsequent
+					// pages
+					int pageSize_tLDAPInput_1 = 100000;
+					byte[] cookie_tLDAPInput_1 = null;
+					// Request the paged results control
+					javax.naming.ldap.Control[] ctls_tLDAPInput_1 = new javax.naming.ldap.Control[] {
+							new javax.naming.ldap.PagedResultsControl(pageSize_tLDAPInput_1, true) };
+					ctx_tLDAPInput_1.setRequestControls(ctls_tLDAPInput_1);
 
-				while (answer_tLDAPAttributesInput_1.hasMoreElements()) {// a
+					do {
 
-					row1 = null;
-					tLDAPAttributesInput_1_NB_LINE++;
-					javax.naming.directory.Attributes attrs_tLDAPAttributesInput_1 = null;
-					row1 = new row1Struct();
-					try {
-						javax.naming.directory.SearchResult sr_tLDAPAttributesInput_1 = (javax.naming.directory.SearchResult) answer_tLDAPAttributesInput_1
-								.next();
-						globalMap.put("tLDAPAttributesInput_1_RESULT_NAME", sr_tLDAPAttributesInput_1.getName());
-						attrs_tLDAPAttributesInput_1 = sr_tLDAPAttributesInput_1.getAttributes();
+						javax.naming.NamingEnumeration answer_tLDAPInput_1 = ctx_tLDAPInput_1.search(
+								baseDN_tLDAPInput_1, "(&(objectClass=*)(employeeId=*))", searchCtls_tLDAPInput_1);
 
-						objectClasses_tLDAPAttributesInput_1.clear();
-						objectAttributes_tLDAPAttributesInput_1.clear();
-						mandatoryAttributes_tLDAPAttributesInput_1.clear();
-						optionalAttributes_tLDAPAttributesInput_1.clear();
+						while (answer_tLDAPInput_1.hasMoreElements()) {// a
+							row1 = null;
+							tLDAPInput_1_NB_LINE++;
+							javax.naming.directory.Attributes attrs_tLDAPInput_1 = null;
+							row1 = new row1Struct();
+							try {
 
-						for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-								.getIDs(); e_tLDAPAttributesInput_1.hasMore();) {
-							objectAttributes_tLDAPAttributesInput_1.add((String) e_tLDAPAttributesInput_1.next());
-						}
-
-						for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-								.get("objectClass").getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-							objectClasses_tLDAPAttributesInput_1.add((String) e_tLDAPAttributesInput_1.next());
-						}
-
-						for (String objectClass_tLDAPAttributesInput_1 : objectClasses_tLDAPAttributesInput_1) {
-							javax.naming.directory.DirContext schema_tLDAPAttributesInput_1 = (javax.naming.directory.DirContext) rootSchema_tLDAPAttributesInput_1
-									.lookup("ClassDefinition/" + objectClass_tLDAPAttributesInput_1);
-							javax.naming.directory.Attributes attributes_tLDAPAttributesInput_1 = schema_tLDAPAttributesInput_1
-									.getAttributes("");
-
-							if (attributes_tLDAPAttributesInput_1 != null) {
-								if (attributes_tLDAPAttributesInput_1.get("must") != null) {
-									for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attributes_tLDAPAttributesInput_1
-											.get("must").getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-										mandatoryAttributes_tLDAPAttributesInput_1
-												.add((String) e_tLDAPAttributesInput_1.next());
+								javax.naming.directory.SearchResult sr_tLDAPInput_1 = (javax.naming.directory.SearchResult) answer_tLDAPInput_1
+										.next();
+								globalMap.put("tLDAPInput_1_RESULT_NAME", sr_tLDAPInput_1.getName());
+								attrs_tLDAPInput_1 = sr_tLDAPInput_1.getAttributes();
+								// for output
+								if (attrs_tLDAPInput_1 != null) {// b
+									javax.naming.directory.Attribute attr_whenCreated_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("whenCreated");
+									if (attr_whenCreated_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_whenCreated_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.whenCreated = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.whenCreated = null;
 									}
-								}
-
-								if (attributes_tLDAPAttributesInput_1.get("may") != null) {
-									for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attributes_tLDAPAttributesInput_1
-											.get("may").getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-										optionalAttributes_tLDAPAttributesInput_1
-												.add((String) e_tLDAPAttributesInput_1.next());
+									javax.naming.directory.Attribute attr_whenChanged_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("whenChanged");
+									if (attr_whenChanged_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_whenChanged_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.whenChanged = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.whenChanged = null;
 									}
-								}
+									javax.naming.directory.Attribute attr_userPrincipalName_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("userPrincipalName");
+									if (attr_userPrincipalName_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_userPrincipalName_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.userPrincipalName = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.userPrincipalName = null;
+									}
+									javax.naming.directory.Attribute attr_name_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("name");
+									if (attr_name_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_name_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.name = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.name = null;
+									}
+									javax.naming.directory.Attribute attr_mail_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("mail");
+									if (attr_mail_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_mail_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.mail = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.mail = null;
+									}
+									javax.naming.directory.Attribute attr_employeeID_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("employeeID");
+									if (attr_employeeID_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_employeeID_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.employeeID = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.employeeID = null;
+									}
+									javax.naming.directory.Attribute attr_displayName_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("displayName");
+									if (attr_displayName_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_displayName_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.displayName = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.displayName = null;
+									}
+									javax.naming.directory.Attribute attr_sAMAccountName_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("sAMAccountName");
+									if (attr_sAMAccountName_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_sAMAccountName_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.sAMAccountName = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.sAMAccountName = null;
+									}
+									javax.naming.directory.Attribute attr_distinguishedName_tLDAPInput_1 = attrs_tLDAPInput_1
+											.get("distinguishedName");
+									if (attr_distinguishedName_tLDAPInput_1 != null) {
+										StringBuilder attrStr_tLDAPInput_1 = new StringBuilder();
+										for (javax.naming.NamingEnumeration e_tLDAPInput_1 = attr_distinguishedName_tLDAPInput_1
+												.getAll(); e_tLDAPInput_1.hasMore();) {
+											if (attrStr_tLDAPInput_1.length() > 0) {
+												attrStr_tLDAPInput_1.append(";");
+											}
+											attrStr_tLDAPInput_1.append(e_tLDAPInput_1.next().toString());
+										}
+										row1.distinguishedName = attrStr_tLDAPInput_1.toString();
+									} else {
+										row1.distinguishedName = null;
+									}
+								} // b
+							} catch (java.lang.Exception e) {
+								globalMap.put("tLDAPInput_1_ERROR_MESSAGE", e.getMessage());
+
+								throw (e);
 							}
-							schema_tLDAPAttributesInput_1.close();
-						}
+///////////////////////////////////        
 
-						// for output
-						StringBuilder attrStr_tLDAPAttributesInput_1 = null;
-						if (attrs_tLDAPAttributesInput_1 != null) {// b
-							javax.naming.directory.Attribute attr_whenCreated_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("whenCreated");
-							if (attr_whenCreated_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_whenCreated_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.whenCreated = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.whenCreated = null;
-							}
-							javax.naming.directory.Attribute attr_whenChanged_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("whenChanged");
-							if (attr_whenChanged_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_whenChanged_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.whenChanged = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.whenChanged = null;
-							}
-							javax.naming.directory.Attribute attr_userPrincipalName_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("userPrincipalName");
-							if (attr_userPrincipalName_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_userPrincipalName_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.userPrincipalName = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.userPrincipalName = null;
-							}
-							javax.naming.directory.Attribute attr_name_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("name");
-							if (attr_name_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_name_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.name = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.name = null;
-							}
-							javax.naming.directory.Attribute attr_mail_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("mail");
-							if (attr_mail_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_mail_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.mail = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.mail = null;
-							}
-							javax.naming.directory.Attribute attr_employeeID_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("employeeID");
-							if (attr_employeeID_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_employeeID_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.employeeID = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.employeeID = null;
-							}
-							javax.naming.directory.Attribute attr_displayName_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("displayName");
-							if (attr_displayName_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_displayName_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.displayName = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.displayName = null;
-							}
-							javax.naming.directory.Attribute attr_sAMAccountName_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("sAMAccountName");
-							if (attr_sAMAccountName_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_sAMAccountName_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.sAMAccountName = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.sAMAccountName = null;
-							}
-							javax.naming.directory.Attribute attr_distinguishedName_tLDAPAttributesInput_1 = attrs_tLDAPAttributesInput_1
-									.get("distinguishedName");
-							if (attr_distinguishedName_tLDAPAttributesInput_1 != null) {
-								attrStr_tLDAPAttributesInput_1 = new StringBuilder();
-								for (javax.naming.NamingEnumeration e_tLDAPAttributesInput_1 = attr_distinguishedName_tLDAPAttributesInput_1
-										.getAll(); e_tLDAPAttributesInput_1.hasMore();) {
-									if (attrStr_tLDAPAttributesInput_1.length() > 0) {
-										attrStr_tLDAPAttributesInput_1.append(";");
-									}
-									attrStr_tLDAPAttributesInput_1.append(e_tLDAPAttributesInput_1.next().toString());
-								}
-								row1.distinguishedName = attrStr_tLDAPAttributesInput_1.toString();
-							} else {
-								row1.distinguishedName = null;
-							}
-						} // b
-					} catch (java.lang.Exception e) {
-						globalMap.put("tLDAPAttributesInput_1_ERROR_MESSAGE", e.getMessage());
+							/**
+							 * [tLDAPInput_1 begin ] stop
+							 */
 
-						throw (e);
-					}
-///////////////////////////////////		
+							/**
+							 * [tLDAPInput_1 main ] start
+							 */
 
-					/**
-					 * [tLDAPAttributesInput_1 begin ] stop
-					 */
+							currentComponent = "tLDAPInput_1";
 
-					/**
-					 * [tLDAPAttributesInput_1 main ] start
-					 */
+							tos_count_tLDAPInput_1++;
 
-					currentComponent = "tLDAPAttributesInput_1";
+							/**
+							 * [tLDAPInput_1 main ] stop
+							 */
 
-					tos_count_tLDAPAttributesInput_1++;
+							/**
+							 * [tLDAPInput_1 process_data_begin ] start
+							 */
 
-					/**
-					 * [tLDAPAttributesInput_1 main ] stop
-					 */
+							currentComponent = "tLDAPInput_1";
 
-					/**
-					 * [tLDAPAttributesInput_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tLDAPAttributesInput_1";
-
-					/**
-					 * [tLDAPAttributesInput_1 process_data_begin ] stop
-					 */
+							/**
+							 * [tLDAPInput_1 process_data_begin ] stop
+							 */
 // Start of branch "row1"
-					if (row1 != null) {
+							if (row1 != null) {
 
-						/**
-						 * [tLogRow_1 main ] start
-						 */
+								/**
+								 * [tLogRow_1 main ] start
+								 */
 
-						currentComponent = "tLogRow_1";
+								currentComponent = "tLogRow_1";
 
-						if (execStat) {
-							runStat.updateStatOnConnection(iterateId, 1, 1
+								if (execStat) {
+									runStat.updateStatOnConnection(iterateId, 1, 1
 
-									, "row1"
+											, "row1"
 
-							);
-						}
+									);
+								}
 
 ///////////////////////		
 
-						String[] row_tLogRow_1 = new String[9];
+								String[] row_tLogRow_1 = new String[9];
 
-						if (row1.whenCreated != null) { //
-							row_tLogRow_1[0] = String.valueOf(row1.whenCreated);
+								if (row1.whenCreated != null) { //
+									row_tLogRow_1[0] = String.valueOf(row1.whenCreated);
 
-						} //
+								} //
 
-						if (row1.whenChanged != null) { //
-							row_tLogRow_1[1] = String.valueOf(row1.whenChanged);
+								if (row1.whenChanged != null) { //
+									row_tLogRow_1[1] = String.valueOf(row1.whenChanged);
 
-						} //
+								} //
 
-						if (row1.userPrincipalName != null) { //
-							row_tLogRow_1[2] = String.valueOf(row1.userPrincipalName);
+								if (row1.userPrincipalName != null) { //
+									row_tLogRow_1[2] = String.valueOf(row1.userPrincipalName);
 
-						} //
+								} //
 
-						if (row1.name != null) { //
-							row_tLogRow_1[3] = String.valueOf(row1.name);
+								if (row1.name != null) { //
+									row_tLogRow_1[3] = String.valueOf(row1.name);
 
-						} //
+								} //
 
-						if (row1.mail != null) { //
-							row_tLogRow_1[4] = String.valueOf(row1.mail);
+								if (row1.mail != null) { //
+									row_tLogRow_1[4] = String.valueOf(row1.mail);
 
-						} //
+								} //
 
-						if (row1.employeeID != null) { //
-							row_tLogRow_1[5] = String.valueOf(row1.employeeID);
+								if (row1.employeeID != null) { //
+									row_tLogRow_1[5] = String.valueOf(row1.employeeID);
 
-						} //
+								} //
 
-						if (row1.displayName != null) { //
-							row_tLogRow_1[6] = String.valueOf(row1.displayName);
+								if (row1.displayName != null) { //
+									row_tLogRow_1[6] = String.valueOf(row1.displayName);
 
-						} //
+								} //
 
-						if (row1.sAMAccountName != null) { //
-							row_tLogRow_1[7] = String.valueOf(row1.sAMAccountName);
+								if (row1.sAMAccountName != null) { //
+									row_tLogRow_1[7] = String.valueOf(row1.sAMAccountName);
 
-						} //
+								} //
 
-						if (row1.distinguishedName != null) { //
-							row_tLogRow_1[8] = String.valueOf(row1.distinguishedName);
+								if (row1.distinguishedName != null) { //
+									row_tLogRow_1[8] = String.valueOf(row1.distinguishedName);
 
-						} //
+								} //
 
-						util_tLogRow_1.addRow(row_tLogRow_1);
-						nb_line_tLogRow_1++;
+								util_tLogRow_1.addRow(row_tLogRow_1);
+								nb_line_tLogRow_1++;
 //////
 
 //////                    
 
 ///////////////////////    			
 
-						tos_count_tLogRow_1++;
+								row2 = row1;
 
-						/**
-						 * [tLogRow_1 main ] stop
-						 */
+								tos_count_tLogRow_1++;
 
-						/**
-						 * [tLogRow_1 process_data_begin ] start
-						 */
+								/**
+								 * [tLogRow_1 main ] stop
+								 */
 
-						currentComponent = "tLogRow_1";
+								/**
+								 * [tLogRow_1 process_data_begin ] start
+								 */
 
-						/**
-						 * [tLogRow_1 process_data_begin ] stop
-						 */
+								currentComponent = "tLogRow_1";
 
-						/**
-						 * [tLogRow_1 process_data_end ] start
-						 */
+								/**
+								 * [tLogRow_1 process_data_begin ] stop
+								 */
 
-						currentComponent = "tLogRow_1";
+								/**
+								 * [tFileOutputDelimited_1 main ] start
+								 */
 
-						/**
-						 * [tLogRow_1 process_data_end ] stop
-						 */
+								currentComponent = "tFileOutputDelimited_1";
 
-					} // End of branch "row1"
+								if (execStat) {
+									runStat.updateStatOnConnection(iterateId, 1, 1
 
-					/**
-					 * [tLDAPAttributesInput_1 process_data_end ] start
-					 */
+											, "row2"
 
-					currentComponent = "tLDAPAttributesInput_1";
+									);
+								}
 
-					/**
-					 * [tLDAPAttributesInput_1 process_data_end ] stop
-					 */
+								String[] rowtFileOutputDelimited_1 = new String[9];
+								rowtFileOutputDelimited_1[0] = row2.whenCreated == null ? null : row2.whenCreated;
+								rowtFileOutputDelimited_1[1] = row2.whenChanged == null ? null : row2.whenChanged;
+								rowtFileOutputDelimited_1[2] = row2.userPrincipalName == null ? null
+										: row2.userPrincipalName;
+								rowtFileOutputDelimited_1[3] = row2.name == null ? null : row2.name;
+								rowtFileOutputDelimited_1[4] = row2.mail == null ? null : row2.mail;
+								rowtFileOutputDelimited_1[5] = row2.employeeID == null ? null : row2.employeeID;
+								rowtFileOutputDelimited_1[6] = row2.displayName == null ? null : row2.displayName;
+								rowtFileOutputDelimited_1[7] = row2.sAMAccountName == null ? null : row2.sAMAccountName;
+								rowtFileOutputDelimited_1[8] = row2.distinguishedName == null ? null
+										: row2.distinguishedName;
+								nb_line_tFileOutputDelimited_1++;
+								resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
+								CsvWritertFileOutputDelimited_1.writeNext(rowtFileOutputDelimited_1);
 
-					/**
-					 * [tLDAPAttributesInput_1 end ] start
-					 */
+								tos_count_tFileOutputDelimited_1++;
 
-					currentComponent = "tLDAPAttributesInput_1";
+								/**
+								 * [tFileOutputDelimited_1 main ] stop
+								 */
 
-				} // a
+								/**
+								 * [tFileOutputDelimited_1 process_data_begin ] start
+								 */
 
-				rootSchema_tLDAPAttributesInput_1.close();
+								currentComponent = "tFileOutputDelimited_1";
 
-				ctx_tLDAPAttributesInput_1.close();
+								/**
+								 * [tFileOutputDelimited_1 process_data_begin ] stop
+								 */
 
-				globalMap.put("tLDAPAttributesInput_1_NB_LINE", tLDAPAttributesInput_1_NB_LINE);
+								/**
+								 * [tFileOutputDelimited_1 process_data_end ] start
+								 */
 
-				ok_Hash.put("tLDAPAttributesInput_1", true);
-				end_Hash.put("tLDAPAttributesInput_1", System.currentTimeMillis());
+								currentComponent = "tFileOutputDelimited_1";
+
+								/**
+								 * [tFileOutputDelimited_1 process_data_end ] stop
+								 */
+
+								/**
+								 * [tLogRow_1 process_data_end ] start
+								 */
+
+								currentComponent = "tLogRow_1";
+
+								/**
+								 * [tLogRow_1 process_data_end ] stop
+								 */
+
+							} // End of branch "row1"
+
+							/**
+							 * [tLDAPInput_1 process_data_end ] start
+							 */
+
+							currentComponent = "tLDAPInput_1";
+
+							/**
+							 * [tLDAPInput_1 process_data_end ] stop
+							 */
+
+							/**
+							 * [tLDAPInput_1 end ] start
+							 */
+
+							currentComponent = "tLDAPInput_1";
+
+						} // a
+
+						// examine the response controls
+						javax.naming.ldap.Control[] responseControls_tLDAPInput_1 = ctx_tLDAPInput_1
+								.getResponseControls();
+						if (responseControls_tLDAPInput_1 != null) {
+							for (int i_tLDAPInput_1 = 0; i_tLDAPInput_1 < responseControls_tLDAPInput_1.length; i_tLDAPInput_1++) {
+								if (responseControls_tLDAPInput_1[i_tLDAPInput_1] instanceof javax.naming.ldap.PagedResultsResponseControl) {
+									javax.naming.ldap.PagedResultsResponseControl prrc_tLDAPInput_1 = (javax.naming.ldap.PagedResultsResponseControl) responseControls_tLDAPInput_1[i_tLDAPInput_1];
+									cookie_tLDAPInput_1 = prrc_tLDAPInput_1.getCookie();
+								}
+							}
+						}
+						// pass the cookie back to the server for the next page
+						ctx_tLDAPInput_1.setRequestControls(new javax.naming.ldap.Control[] {
+								new javax.naming.ldap.PagedResultsControl(pageSize_tLDAPInput_1, cookie_tLDAPInput_1,
+										javax.naming.ldap.Control.CRITICAL) });
+
+					} while ((cookie_tLDAPInput_1 != null) && (cookie_tLDAPInput_1.length != 0));
+				} catch (java.lang.Exception e) {
+					globalMap.put("tLDAPInput_1_ERROR_MESSAGE", e.getMessage());
+					throw new java.lang.Exception(e);
+				} finally {
+					if (ctx_tLDAPInput_1 != null) {
+
+						ctx_tLDAPInput_1.close();
+
+					}
+				}
+				globalMap.put("tLDAPInput_1_NB_LINE", tLDAPInput_1_NB_LINE);
+
+				ok_Hash.put("tLDAPInput_1", true);
+				end_Hash.put("tLDAPInput_1", System.currentTimeMillis());
 
 				/**
-				 * [tLDAPAttributesInput_1 end ] stop
+				 * [tLDAPInput_1 end ] stop
 				 */
 
 				/**
@@ -1365,6 +2010,31 @@ public class ldap_to_excel implements TalendJob {
 				 * [tLogRow_1 end ] stop
 				 */
 
+				/**
+				 * [tFileOutputDelimited_1 end ] start
+				 */
+
+				currentComponent = "tFileOutputDelimited_1";
+
+				if (CsvWritertFileOutputDelimited_1 != null) {
+					CsvWritertFileOutputDelimited_1.close();
+				}
+
+				globalMap.put("tFileOutputDelimited_1_NB_LINE", nb_line_tFileOutputDelimited_1);
+
+				resourceMap.put("finish_tFileOutputDelimited_1", true);
+
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row2");
+				}
+
+				ok_Hash.put("tFileOutputDelimited_1", true);
+				end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
+
+				/**
+				 * [tFileOutputDelimited_1 end ] stop
+				 */
+
 			} // end the resume
 
 		} catch (java.lang.Exception e) {
@@ -1382,13 +2052,13 @@ public class ldap_to_excel implements TalendJob {
 			try {
 
 				/**
-				 * [tLDAPAttributesInput_1 finally ] start
+				 * [tLDAPInput_1 finally ] start
 				 */
 
-				currentComponent = "tLDAPAttributesInput_1";
+				currentComponent = "tLDAPInput_1";
 
 				/**
-				 * [tLDAPAttributesInput_1 finally ] stop
+				 * [tLDAPInput_1 finally ] stop
 				 */
 
 				/**
@@ -1401,6 +2071,27 @@ public class ldap_to_excel implements TalendJob {
 				 * [tLogRow_1 finally ] stop
 				 */
 
+				/**
+				 * [tFileOutputDelimited_1 finally ] start
+				 */
+
+				currentComponent = "tFileOutputDelimited_1";
+
+				if (resourceMap.get("finish_tFileOutputDelimited_1") == null) {
+
+					com.talend.csv.CSVWriter CsvWritertFileOutputDelimited_1 = (com.talend.csv.CSVWriter) resourceMap
+							.get("CsvWriter_tFileOutputDelimited_1");
+
+					if (CsvWritertFileOutputDelimited_1 != null) {
+						CsvWritertFileOutputDelimited_1.close();
+					}
+
+				}
+
+				/**
+				 * [tFileOutputDelimited_1 finally ] stop
+				 */
+
 			} catch (java.lang.Exception e) {
 				// ignore
 			} catch (java.lang.Error error) {
@@ -1409,7 +2100,7 @@ public class ldap_to_excel implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tLDAPAttributesInput_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tLDAPInput_1_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -1617,14 +2308,14 @@ public class ldap_to_excel implements TalendJob {
 
 		try {
 			errorCode = null;
-			tLDAPAttributesInput_1Process(globalMap);
+			tLDAPInput_1Process(globalMap);
 			if (!"failure".equals(status)) {
 				status = "end";
 			}
-		} catch (TalendException e_tLDAPAttributesInput_1) {
-			globalMap.put("tLDAPAttributesInput_1_SUBPROCESS_STATE", -1);
+		} catch (TalendException e_tLDAPInput_1) {
+			globalMap.put("tLDAPInput_1_SUBPROCESS_STATE", -1);
 
-			e_tLDAPAttributesInput_1.printStackTrace();
+			e_tLDAPInput_1.printStackTrace();
 
 		}
 
@@ -1780,6 +2471,6 @@ public class ldap_to_excel implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 62568 characters generated by Talend Open Studio for Data Integration on the
- * 12 de mayo de 2025, 23:12:22 COT
+ * 83056 characters generated by Talend Open Studio for Data Integration on the
+ * 13 de mayo de 2025, 00:33:52 COT
  ************************************************************************************************/

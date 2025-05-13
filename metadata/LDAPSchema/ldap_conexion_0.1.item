@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
-  <TalendMetadata:LDAPSchemaConnection xmi:id="_g-mcwC-lEfC20vKQICeB_w" name="repository.metadataLDAPSchema" dataPackage="_g-nD0C-lEfC20vKQICeB_w" Host="fortel.local" Port="389" Protocol="Simple Authentication" Filter="(&amp;(objectClass=*)(employeeId=*))" UseAuthen="true" BindPrincipal="alejandro.montalvan@fortel.local" BindPassword="enc:system.encryption.key.v1:18FFAv8AwmAti2fcshTj2rQWHEgdH+5WefoKAt7DZbEfOLGb6adGuR0=" EncryptionMethodName="LDAP" SavePassword="true" Aliases="always" Referrals="ignore" CountLimit="1000" TimeOutLimit="0" SelectedDN="DC=FORTEL,DC=LOCAL">
+  <TalendMetadata:LDAPSchemaConnection xmi:id="_g-mcwC-lEfC20vKQICeB_w" name="repository.metadataLDAPSchema" id="_g-Am4C-lEfC20vKQICeB_w" dataPackage="_g-nD0C-lEfC20vKQICeB_w" Host="fortel.local" Port="389" Protocol="Simple Authentication" Filter="(&amp;(objectClass=*)(employeeId=*))" UseAuthen="true" BindPrincipal="alejandro.montalvan@fortel.local" BindPassword="enc:system.encryption.key.v1:l0zc3uJsmhNB7PYITpGFrb4hgLfJSZi4tinHgMvhFbecdfgFAhLRXa8=" EncryptionMethodName="LDAP" SavePassword="true" Aliases="always" Referrals="ignore" CountLimit="10000" TimeOutLimit="10000" SelectedDN="DC=FORTEL,DC=LOCAL">
     <Value>whenCreated</Value>
     <Value>whenChanged</Value>
     <Value>userPrincipalName</Value>
@@ -19,15 +19,15 @@
   </TalendMetadata:LDAPSchemaConnection>
   <TalendMetadata:GenericPackage xmi:id="_g-nD0C-lEfC20vKQICeB_w" name="repository.metadataLDAPSchema" dataManager="_g-mcwC-lEfC20vKQICeB_w">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_g-nD0S-lEfC20vKQICeB_w" id="_lkDzsC-fEfC20vKQICeB_w" label="metadata_ldap">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD0i-lEfC20vKQICeB_w" name="whenCreated" label="whenCreated" length="17" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD0y-lEfC20vKQICeB_w" name="whenChanged" label="whenChanged" length="17" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD1C-lEfC20vKQICeB_w" name="userPrincipalName" label="userPrincipalName" length="35" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD1S-lEfC20vKQICeB_w" name="name" label="name" length="43" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD1i-lEfC20vKQICeB_w" name="mail" label="mail" length="37" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD1y-lEfC20vKQICeB_w" name="employeeID" label="employeeID" length="10" talendType="id_String" key="true"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD2C-lEfC20vKQICeB_w" name="displayName" label="displayName" length="46" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD2S-lEfC20vKQICeB_w" name="sAMAccountName" label="sAMAccountName" length="20" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_g-nD2i-lEfC20vKQICeB_w" name="distinguishedName" label="distinguishedName" length="147" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5MC-6EfC5rbsEIV4OjQ" name="whenCreated" label="whenCreated" length="17" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5MS-6EfC5rbsEIV4OjQ" name="whenChanged" label="whenChanged" length="17" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5Mi-6EfC5rbsEIV4OjQ" name="userPrincipalName" label="userPrincipalName" length="35" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5My-6EfC5rbsEIV4OjQ" name="name" label="name" length="43" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5NC-6EfC5rbsEIV4OjQ" name="mail" label="mail" length="37" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5NS-6EfC5rbsEIV4OjQ" name="employeeID" label="employeeID" length="10" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5Ni-6EfC5rbsEIV4OjQ" name="displayName" label="displayName" length="46" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5Ny-6EfC5rbsEIV4OjQ" name="sAMAccountName" label="sAMAccountName" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZfA5OC-6EfC5rbsEIV4OjQ" name="distinguishedName" label="distinguishedName" length="147" talendType="id_String"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>

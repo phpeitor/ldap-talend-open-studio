@@ -120,6 +120,17 @@
       </exclusions>
     </dependency>
     <dependency>
+      <groupId>org.talend.components</groupId>
+      <artifactId>talendcsv</artifactId>
+      <version>1.0.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talendssl</artifactId>
       <version>1.0-20190118</version>

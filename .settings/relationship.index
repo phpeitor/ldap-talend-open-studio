@@ -5,9 +5,17 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_5eQEsC-0EfC20vKQICeB_w",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_g-Am4C-lEfC20vKQICeB_w",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_5eQEsC-0EfC20vKQICeB_w - metadata",
+    "version" : "Latest",
+    "type" : "schema"
   }, {
     "id" : "_g-Am4C-lEfC20vKQICeB_w - metadata_ldap",
     "version" : "Latest",
