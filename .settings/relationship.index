@@ -1,0 +1,16 @@
+[ {
+  "baseItem" : {
+    "id" : "_uB9okC-pEfC20vKQICeB_w",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_g-Am4C-lEfC20vKQICeB_w",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_g-Am4C-lEfC20vKQICeB_w - metadata_ldap",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+} ]
