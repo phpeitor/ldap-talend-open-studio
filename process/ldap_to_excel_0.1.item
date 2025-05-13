@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:Ry7xbo6Pt9CL/n7Jv6z9UzzE7tAqmrKRh0AuPKHw" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:zspW5Nw576hbl5/2SmK3OoBZnE9hajUPUgZ3iWJB" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Wu8/oPHVK7i61nGzg2/hit+fJ+OIF55wOprQVTRk" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:f9AL6JYayDhnP7j0AT7J+VOEGi/nqf8daf3FaLVO" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -110,8 +110,6 @@
   <node componentName="tLDAPInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLDAPInput_1" show="false"/>
     <elementParameter field="LABEL" name="NOTE" value="*Note: This component only supports byte[], List and String types."/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_g-Am4C-lEfC20vKQICeB_w" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;fortel.local&quot;"/>
@@ -120,11 +118,11 @@
     <elementParameter field="CLOSED_LIST" name="PROTOCOL" value="LDAP"/>
     <elementParameter field="CHECK" name="ADVANCEDCA" value="false" show="false"/>
     <elementParameter field="FILE" name="STORECA" value="&quot;c:/mycacerts&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:kSUNdHneyHzxKj6T0wcziZlSjCxfVliXLJlZi/Fm" show="false"/>
+    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:94q6qigfxLLiD9BnucTm/9Ckj1rheJe2yyX5zLrP" show="false"/>
     <elementParameter field="CHECK" name="ALWAYS_TRUST" value="false" show="false"/>
     <elementParameter field="CHECK" name="AUTHENTIFICATION" value="true"/>
     <elementParameter field="TEXT" name="USER" value="&quot;alejandro.montalvan@fortel.local&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ybkrCdV5+LMA6e9eYQ4mPWXMTpAWQ4b9FEO3+R96bz7S2TJV6a4XMzHw6w=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:jWCnDT0366gCDHtw9HTLpXZek+At2UDcM9QzLOwsqRaAR2fEs67OhpF8EA=="/>
     <elementParameter field="CLOSED_LIST" name="ALIASES" value="always"/>
     <elementParameter field="CLOSED_LIST" name="REFERRALS" value="ignore"/>
     <elementParameter field="MEMO" name="FILTER" value="&quot;(&amp;(objectClass=*)(employeeId=*))&quot;"/>
@@ -132,7 +130,7 @@
     <elementParameter field="TEXT" name="LIMIT" value="10000"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="10000"/>
     <elementParameter field="CHECK" name="ISPAGING" value="true"/>
-    <elementParameter field="TEXT" name="PAGESIZE" value="100000"/>
+    <elementParameter field="TEXT" name="PAGESIZE" value="1000"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_g-Am4C-lEfC20vKQICeB_w - metadata_ldap" show="false"/>
@@ -234,8 +232,6 @@
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_5eQEsC-0EfC20vKQICeB_w" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LDAP_TOS/ldap.csv&quot;"/>
@@ -260,8 +256,8 @@
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1" show="false"/>
     <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
     <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
@@ -287,7 +283,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <note opaque="false" posX="288" posY="32" sizeHeight="65" sizeWidth="129" text="LDAP to CSV"/>
+  <note opaque="true" posX="288" posY="32" sizeHeight="65" sizeWidth="129" text="LDAP to CSV">
+    <elementParameter field="TEXT" name="NOTE_FONT" value="Verdana"/>
+  </note>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLDAPInput_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
