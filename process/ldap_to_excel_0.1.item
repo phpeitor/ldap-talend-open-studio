@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:+w40BAVtwtc2jZ9SgAu5VN6rdB2zZVn4rpQpGRIU" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:w3UHsbGaocO000NNVc6grIujKdQkon16dbPFKTSo" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nyHL/nLz4HxUk+OtuoFyO5LjyGbaaZvlXVWUpuhc" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5JdgRCUH8ok6dZaq2nVjxDoIp72s0vfnZcwKMkku" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -118,11 +118,11 @@
     <elementParameter field="CLOSED_LIST" name="PROTOCOL" value="LDAP"/>
     <elementParameter field="CHECK" name="ADVANCEDCA" value="false" show="false"/>
     <elementParameter field="FILE" name="STORECA" value="&quot;c:/mycacerts&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:QcfSsP4J55Aq+g7jC53dem1FOPDtYnlRPXp49Ozc" show="false"/>
+    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:DqnYW7QszPYsduAjG6a9Bb0h6wFjynRkbAFixCUX" show="false"/>
     <elementParameter field="CHECK" name="ALWAYS_TRUST" value="false" show="false"/>
     <elementParameter field="CHECK" name="AUTHENTIFICATION" value="true"/>
     <elementParameter field="TEXT" name="USER" value="&quot;alejandro.montalvan@fortel.local&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iL8vcmYPlmmhaEdgxdmCr0DIl5kuaKCexEFHW6bZjQcnbNkDFkCAPx4fVw=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:MTOWJDtgmSAiW9Zbqrlq4x9h8JeFEO2138DwcCTtWVi153Spxbx4+X8sbw=="/>
     <elementParameter field="CLOSED_LIST" name="ALIASES" value="always"/>
     <elementParameter field="CLOSED_LIST" name="REFERRALS" value="ignore"/>
     <elementParameter field="MEMO" name="FILTER" value="&quot;(&amp;(objectClass=*)(employeeId=*))&quot;"/>
@@ -288,11 +288,11 @@
     <elementParameter field="CLOSED_LIST" name="PROTOCOL" value="LDAP"/>
     <elementParameter field="CHECK" name="ADVANCEDCA" value="false" show="false"/>
     <elementParameter field="FILE" name="STORECA" value="&quot;c:/mycacerts&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:NcQbEaDXSpXyP7AxOFZalKlcYvFTypfh2ONB/PZf" show="false"/>
+    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:8WwNTdiVbkoE2voH07NmWhLoXoJ9dYuz31tDUfE9" show="false"/>
     <elementParameter field="CHECK" name="ALWAYS_TRUST" value="false" show="false"/>
     <elementParameter field="CHECK" name="AUTHENTIFICATION" value="true"/>
     <elementParameter field="TEXT" name="USER" value="&quot;alejandro.montalvan@fortel.local&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iuwDb10u1BHZSjw5whKjh0FyUj/ASZNop8UvhRg6Y3vQg2vytt4XD4Sq2Q=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:qf6y1qpYPwdsuLdQp8vuCXtfh2iOuNQac1DsVFIEPbLnNnz636GUZHOiPA=="/>
     <elementParameter field="CLOSED_LIST" name="ALIASES" value="always"/>
     <elementParameter field="CLOSED_LIST" name="REFERRALS" value="ignore"/>
     <elementParameter field="MEMO" name="FILTER" value="&quot;(&amp;(objectClass=*)(employeeId=*))&quot;"/>
@@ -393,7 +393,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:3wwIUZLFfdKn3qwpUtGu1R1PVE74ip3sQ/+5cR66" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Ve4/E19E7ha/fYDGqBvpospha2ig4Wsy0YoTZtWx" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_4cMAwDAiEfCQc4tqFLDu2g - metadata" show="false"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
@@ -444,13 +444,17 @@
     <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
   </note>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLDAPInput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Importando usuarios LDAP en CSV"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="124;179;64"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="169;214;213"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLDAPInput_2" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Importando usuarios LDAP en Excel"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="192;192;192"/>
   </subjob>
 </talendfile:ProcessType>

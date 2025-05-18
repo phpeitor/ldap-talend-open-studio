@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:LTW1rIjShjat+sfEMqHGNkISjcHaSVxUspHVYF3s" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EhNfF9Gjl10drcRrpDVE6scnDsPxrc3wDyjtAL6h" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Gj8b3+BD5sJQeIphtpGRYESVj/2dVGxx1WkqG7RI" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VGhAeOaeGfgqWZ9Yvfek8F7DFXYDinZ06F+xK5KP" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -107,7 +107,7 @@
     <routinesParameter id="_fJJlwC-fEfC20vKQICeB_w" name="TalendStringUtil"/>
     <routinesParameter id="_fJCRAC-fEfC20vKQICeB_w" name="TalendString"/>
   </parameters>
-  <node componentName="tLDAPInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="160">
+  <node componentName="tLDAPInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLDAPInput_1" show="false"/>
     <elementParameter field="LABEL" name="NOTE" value="*Note: This component only supports byte[], List and String types."/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -120,11 +120,11 @@
     <elementParameter field="CLOSED_LIST" name="PROTOCOL" value="LDAP"/>
     <elementParameter field="CHECK" name="ADVANCEDCA" value="false" show="false"/>
     <elementParameter field="FILE" name="STORECA" value="&quot;c:/mycacerts&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:MmF5SvyyklV/vMxnfz8kNqqRkpX3+dxad6jWuW4u" show="false"/>
+    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:ulzNWGNE3n+GZ0ZXfEEVs7f1+x8MQzCPM5q/MedC" show="false"/>
     <elementParameter field="CHECK" name="ALWAYS_TRUST" value="false" show="false"/>
     <elementParameter field="CHECK" name="AUTHENTIFICATION" value="true"/>
     <elementParameter field="TEXT" name="USER" value="&quot;alejandro.montalvan@fortel.local&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zsO9E/6LHPiF8SV25b/Jeh9fC3Q1EdcIUWxYUkAkpzxKT0z5lsiuvTycwQ=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AGtYRjH5D6B4w3f5lsVz/+YdivTGR85L8qjvfEWmy4hS7E1bZ9Xc9Cik7w=="/>
     <elementParameter field="CLOSED_LIST" name="ALIASES" value="always"/>
     <elementParameter field="CLOSED_LIST" name="REFERRALS" value="ignore"/>
     <elementParameter field="MEMO" name="FILTER" value="&quot;(&amp;(objectClass=*)(employeeId=*))&quot;"/>
@@ -184,7 +184,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_YNvksDLSEfC70IzsTSOCdg" show="false"/>
@@ -197,7 +197,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;BD_METADATA&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:2I6ID0f8z1E5pHlOA1+pZnBD8kLqDvINuF/i9CTaG4PeHv4npro="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XNp5TGyXq11QvTuzJpDwaKi5fiRf4zxoaaRXoH/U8H8XWo8qtLQ="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ActiveDirectoryUsers&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -304,9 +304,15 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
+  <note opaque="true" posX="224" posY="32" sizeHeight="33" sizeWidth="129" text="LDAP to JTDS-SQL">
+    <elementParameter field="TEXT" name="NOTE_FONT" value="@Arial Unicode MS"/>
+    <elementParameter field="TEXT" name="FONT_SIZE" value="8"/>
+  </note>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLDAPInput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Insertar usuarios LDAP en SQL Server"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
 </talendfile:ProcessType>
