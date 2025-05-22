@@ -8,10 +8,10 @@
 
 ## 🚀 Quick Start
 - Clona este repositorio en tu máquina local utilizando el comando git clone [URL_del_repositorio].
-- Abre el archivo index.html en tu navegador web preferido.
+- Abre la consola y ejecuta
 
 ```
-    .\index.html
+    .\ldap_to_excel_run.ps1
 ```
 <a href="#" target="_self" style="pointer-events: none;">
   <img src="https://wiesseconsultores.com/demo.gif" alt="Demo Git">
