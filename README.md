@@ -13,7 +13,7 @@ Ideal para administradores de sistemas, equipos de TI y analistas de datos que r
 🎥[Ver demo](https://www.youtube.com/watch?v=TF7_l2JltMc)
 
 ## 🚀 Quick Start
-### **Clona este repositorio en tu máquina local utilizando el comando git clone [URL_del_repositorio]**
+### **Clona este repositorio en tu máquina local**
 ```bash
     git clone https://github.com/phpeitor/ldap-talend-open-studio.git
     cd ldap-talend-open-studio/exe/ldap_to_excel
