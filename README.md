@@ -1,14 +1,19 @@
 # Talend Open Studio - ETL 🛠⚙️🛢️⛏️
-
 [![forthebadge](http://forthebadge.com/images/badges/made-with-java.svg)](https://www.linkedin.com/in/drphp/)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://www.linkedin.com/in/drphp/)
+
+* Talend Open Studio for Data Integration (TOS DI 8.0.1)
+* Java (JAR ejecutable) para procesamiento eficiente
+* PowerShell/Batch/Shell Script para automatización
+
+Ideal para administradores de sistemas, equipos de TI y analistas de datos que requieran extraer y organizar información de directorios corporativos en formato excel sin procesos manuales.
 
 [![Video](https://img.youtube.com/vi/m8Hae0KYcgM/0.jpg)](https://www.youtube.com/watch?v=m8Hae0KYcgM)  
 🎥[Ver demo](https://www.youtube.com/watch?v=m8Hae0KYcgM)
 
 ## 🚀 Quick Start
 - Clona este repositorio en tu máquina local utilizando el comando git clone [URL_del_repositorio].
-- Abre la consola y ejecuta
+- Abre la consola y ejecuta el comando
 
 ```
     .\ldap_to_excel_run.ps1
