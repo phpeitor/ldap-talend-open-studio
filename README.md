@@ -18,10 +18,12 @@ Ideal para administradores de sistemas, equipos de TI y analistas de datos que r
     git clone https://github.com/phpeitor/ldap-talend-open-studio.git
     cd ldap-talend-open-studio/exe/ldap_to_excel
 ```
+
 ### **Abre la consola Windows (PowerShell)**
 ```powershell
     .\ldap_to_excel_run.ps1
 ```
+
 ### **Linux/Mac**
 ```bash
     chmod +x ldap_to_excel_run.sh
@@ -29,6 +31,10 @@ Ideal para administradores de sistemas, equipos de TI y analistas de datos que r
 ```
 
 ## 💡 Casos de Uso
+- ✅ Auditorías de directorios de usuarios
+- ✅ Reportes de empleados para RRHH
+- ✅ Gestión de activos de TI
+- ✅ Chequeos de cumplimiento de seguridad
 
 <a href="#" target="_self" style="pointer-events: none;">
   <img src="https://wiesseconsultores.com/demo.gif" alt="Demo Git">
