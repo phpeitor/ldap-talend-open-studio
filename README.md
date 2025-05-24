@@ -20,17 +20,22 @@ Ideal para administradores de sistemas, equipos de TI y analistas de datos que r
 ```bash
     git clone https://github.com/phpeitor/ldap-talend-open-studio.git
     cd ldap-talend-open-studio/exe/ldap_to_excel
+    cd ldap-talend-open-studio/exe/ldap_to_sql
 ```
 
 ### **Abre la consola Windows (PowerShell)**
 ```powershell
     .\ldap_to_excel_run.ps1
+    .\ldap_to_sql_run.ps1
 ```
 
 ### **Linux/Mac**
 ```bash
     chmod +x ldap_to_excel_run.sh
     ./ldap_to_excel_run.sh
+
+    chmod +x ldap_to_sql_run.sh
+    ./ldap_to_sql_run.sh
 ```
 
 ## 💡 Casos de Uso
