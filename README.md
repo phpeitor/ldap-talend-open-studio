@@ -10,10 +10,10 @@
 Ideal para administradores de sistemas, equipos de TI y analistas de datos que requieran extraer y organizar información de directorios corporativos en formato excel sin procesos manuales.
 
 [![Video](https://img.youtube.com/vi/TF7_l2JltMc/0.jpg)](https://www.youtube.com/watch?v=TF7_l2JltMc)  
-🎥[Ver demo](https://www.youtube.com/watch?v=TF7_l2JltMc)
+🎥[Ver demo?v1.0&excel_tos](https://www.youtube.com/watch?v=TF7_l2JltMc)
 
 [![Video](https://img.youtube.com/vi/CZ2X_i4oaTs/0.jpg)](https://www.youtube.com/watch?v=CZ2X_i4oaTs)  
-🎥[Ver demo](https://www.youtube.com/watch?v=CZ2X_i4oaTs)
+🎥[Ver demo?v1.0&sql_tos](https://www.youtube.com/watch?v=CZ2X_i4oaTs)
 
 ## 🚀 Quick Start
 ### **Clona este repositorio en tu máquina local**
