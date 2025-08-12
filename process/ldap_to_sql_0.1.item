@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:QBkmG9XXQy+53TUBdHVcTY5ovJF1y6+sqzg92KXA" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:hQ1dCoh/hytAl8o8T27AYJpnMppmCc5xSxgovC0q" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/havcEaOb5GAa7zNkTbjNuRPGgEMYCOPMAwrybTt" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:wnlNuGks94s2093aHbA6Pn0MLs/Avo4iabcXXmLi" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -120,11 +120,11 @@
     <elementParameter field="CLOSED_LIST" name="PROTOCOL" value="LDAP"/>
     <elementParameter field="CHECK" name="ADVANCEDCA" value="false" show="false"/>
     <elementParameter field="FILE" name="STORECA" value="&quot;c:/mycacerts&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:OEU4DwGdlF9cmQyCO0AHkHFXegfiqTb7+8TDldzq" show="false"/>
+    <elementParameter field="PASSWORD" name="STORECAPWD" value="enc:system.encryption.key.v1:lciCiPD4CY1C9M61UxaDVOMk5xWZt4HQk9BEk9Mt" show="false"/>
     <elementParameter field="CHECK" name="ALWAYS_TRUST" value="false" show="false"/>
     <elementParameter field="CHECK" name="AUTHENTIFICATION" value="true"/>
     <elementParameter field="TEXT" name="USER" value="&quot;alejandro.montalvan@fortel.local&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:q0fPZxakHNd/VVFwEeFTUtkQzMzozz+5qyTGMuZKzZmMEG/ESDFQLZOA7Q=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Zz0pbUp1E3w0ThlY4dpsttScvPcR/x+2HvBHRRxX4Y6uZSXy7UYLaDFW8g=="/>
     <elementParameter field="CLOSED_LIST" name="ALIASES" value="always"/>
     <elementParameter field="CLOSED_LIST" name="REFERRALS" value="ignore"/>
     <elementParameter field="MEMO" name="FILTER" value="&quot;(&amp;(objectClass=*)(employeeId=*))&quot;"/>
@@ -197,7 +197,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;BD_METADATA&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MSSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4Zt0fjqY2q4q+uPRupXmC6YrdD9LvpFrs3dzDEFz0TpbvpdkZPc="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:gihbi7XE/cgkO09K6njA+st9rzDdgMecV3ITdRTTAA3sXp6jwzY="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ActiveDirectoryUsers&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -300,9 +300,32 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFileOutputJSON" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputJSON_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LDAP_TOS/out.json&quot;"/>
+    <elementParameter field="CHECK" name="GENERATE_JSON_ARRAY" value="false"/>
+    <elementParameter field="TEXT" name="DATABLOCKNAME" value="&quot;data&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata_ldap" name="tFileOutputJSON_1">
+      <column comment="" key="false" length="17" name="whenCreated" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="17" name="whenChanged" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="35" name="userPrincipalName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="43" name="name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="37" name="mail" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="10" name="employeeID" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="46" name="displayName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="sAMAccountName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="147" name="distinguishedName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tLDAPInput_1" offsetLabelX="0" offsetLabelY="0" source="tLDAPInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tFileOutputJSON_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
   <note opaque="true" posX="32" posY="32" sizeHeight="33" sizeWidth="129" text="LDAP to JTDS-SQL">
     <elementParameter field="TEXT" name="NOTE_FONT" value="@Arial Unicode MS"/>

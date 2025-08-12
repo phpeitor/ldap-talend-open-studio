@@ -1,2 +1,3 @@
-ldap.csv
-ldap.xls
+*.csv
+*.xls
+*.xlsx

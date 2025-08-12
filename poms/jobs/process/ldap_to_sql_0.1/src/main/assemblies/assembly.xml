@@ -256,6 +256,7 @@
             <includes>
                 <include>org.talend.libraries:talendssl:jar:1.0-20190118</include>
                 <include>org.example.ldap_tos.code:routines:jar:8.0.1</include>
+                <include>org.talend.libraries:json_simple-1.1:jar:6.0.0</include>
             </includes>
             <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>false</useProjectArtifact>
